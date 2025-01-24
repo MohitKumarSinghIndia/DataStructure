@@ -1,8 +1,8 @@
-package Sorting;
+package SortingAlgorithms;
 
 public class BubbleSort {
 
-    public int[] bubbleSort(int numbers[]) {
+    public int[] bubbleSort(int[] numbers ) {
         int size = numbers.length;
         int temp = 0;
 
