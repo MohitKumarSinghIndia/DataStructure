@@ -7,7 +7,7 @@ public class Main {
 
         BubbleSort bs = new BubbleSort();
 
-        System.out.println("Before Sort");
+        System.out.println("Array Before Sort");
         for (int arr : unSortedArray) {
             System.out.print(arr + " ");
         }
@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println();
 
-        System.out.println("After Sort");
+        System.out.println("Array After Sort");
         for (int res : result) {
             System.out.print(res + " ");
         }
