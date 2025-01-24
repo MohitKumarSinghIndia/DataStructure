@@ -16,6 +16,7 @@ You can reach me at:
 
 ### In Progress
 - Sorting Algorithms
+- Searching Algorithms
 
 ### Upcoming Topics
 - Linked Lists
