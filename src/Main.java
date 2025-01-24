@@ -1,5 +1,5 @@
 import SearchingAlgorithms.RecursiveBinarySearch;
-import SortingAlgorithms.SelectionSort;
+import SortingAlgorithms.InsertionSort;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,14 +8,14 @@ public class Main {
         int searchingValue = 5;
 
         // Instantiate the sorting and searching algorithm objects
+        InsertionSort ss = new InsertionSort();
         RecursiveBinarySearch rbs = new RecursiveBinarySearch();
-        SelectionSort ss = new SelectionSort();
 
         // Print the array before sorting
         printArray("Array Before Sort:", unsortedArray);
 
         // Sort the array using Selection Sort
-        int[] sortedArray = ss.selectionSort(unsortedArray);
+        int[] sortedArray = ss.insertionSort(unsortedArray);
 
         // Print the array after sorting
         printArray("Array After Sort:", sortedArray);
