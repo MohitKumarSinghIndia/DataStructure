@@ -1,22 +1,22 @@
-import Shorting.BubbleShort;
+import Sorting.BubbleSort;
 
 public class Main {
     public static void main(String[] args) {
 
-        int unShortedArray[] = {2, 5, 8, 4, 9, 3, 18, 6, 45, 12, 35, 21, 25, 31};
+        int unSortedArray[] = {2, 5, 8, 4, 9, 3, 18, 6, 45, 12, 35, 21, 25, 31};
 
-        BubbleShort bs = new BubbleShort();
+        BubbleSort bs = new BubbleSort();
 
-        System.out.println("Before Short");
-        for (int arr : unShortedArray) {
+        System.out.println("Before Sort");
+        for (int arr : unSortedArray) {
             System.out.print(arr + " ");
         }
 
-        int result[] = bs.bubbleShort(unShortedArray);
+        int result[] = bs.bubbleSort(unSortedArray);
 
         System.out.println();
 
-        System.out.println("After Short");
+        System.out.println("After Sort");
         for (int res : result) {
             System.out.print(res + " ");
         }

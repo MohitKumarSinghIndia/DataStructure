@@ -1,8 +1,8 @@
-package Shorting;
+package Sorting;
 
-public class BubbleShort {
+public class BubbleSort {
 
-    public int[] bubbleShort(int numbers[]) {
+    public int[] bubbleSort(int numbers[]) {
         int size = numbers.length;
         int temp = 0;
 
