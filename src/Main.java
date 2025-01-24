@@ -1,34 +1,43 @@
 import SearchingAlgorithms.RecursiveBinarySearch;
-import SortingAlgorithms.BubbleSort;
+import SortingAlgorithms.SelectionSort;
 
 public class Main {
     public static void main(String[] args) {
-
-        int [] unSortedArray = {2, 5, 8, 4, 9, 3, 18, 6, 45, 12, 35, 21, 25, 31};
+        // Initialize the unsorted array and the value to search for
+        int[] unsortedArray = {2, 5, 8, 4, 9, 3, 18, 6, 45, 12, 35, 21, 25, 31};
         int searchingValue = 5;
 
+        // Instantiate the sorting and searching algorithm objects
         RecursiveBinarySearch rbs = new RecursiveBinarySearch();
-        BubbleSort bs = new BubbleSort();
+        SelectionSort ss = new SelectionSort();
 
-        System.out.println("Array Before sort");
-        for(int num : unSortedArray){
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        // Print the array before sorting
+        printArray("Array Before Sort:", unsortedArray);
 
-        int [] sortedArray = bs.bubbleSort(unSortedArray);
-        System.out.println("Array After sort");
-        for(int num : sortedArray){
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        // Sort the array using Selection Sort
+        int[] sortedArray = ss.selectionSort(unsortedArray);
 
-        System.out.println("Searching Element = " + searchingValue);
-        int result = rbs.recursiveBinarySearch(sortedArray, searchingValue, 0, sortedArray.length-1);
+        // Print the array after sorting
+        printArray("Array After Sort:", sortedArray);
 
-        if (result != -1)
-            System.out.println("Element found at index " + result);
-        else
+        // Search for the value using Recursive Binary Search
+        System.out.println("\nSearching Element: " + searchingValue);
+        int result = rbs.recursiveBinarySearch(sortedArray, searchingValue, 0, sortedArray.length - 1);
+
+        // Display the search result
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
             System.out.println("Element not found");
+        }
+    }
+
+    // Utility method to print an array with a message
+    public static void printArray(String message, int[] array) {
+        System.out.println(message);
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
